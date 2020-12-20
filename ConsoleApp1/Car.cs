@@ -6,7 +6,7 @@ namespace ConsoleApp1
 {
     class Car
     {
-        String marka;
+        public String marka;
         int year;
         int price;
         public void init()

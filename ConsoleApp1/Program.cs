@@ -12,6 +12,12 @@ namespace ConsoleApp1
                 cars[i] = new Car();
                 cars[i].init("Лада 210" + (i+3), Convert.ToInt32(200.ToString() + (i + 3)), 100000 * (i+1));
             }
+
+            //Различие между присваиванием объектов класса и структуры
+            cars[0] = cars[1];
+            cars[1].marka = "БМВ";
+
+
             for (int i = 0; i < cars.Length; i++)
             {
                 cars[i].display();
