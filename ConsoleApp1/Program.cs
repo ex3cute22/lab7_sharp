@@ -24,6 +24,14 @@ namespace ConsoleApp1
                 cars[i].display();
             }
 
+            cars[3].Year = 3000;
+            cars[2].Year = 1900;
+
+            for (int i = 0; i < cars.Length; i++)
+            {
+                cars[i].display();
+            }
+
             /* cars[0] = cars[1];
              Car toyota = new Car();
              toyota.init("toyota", 2000, 100000);

@@ -9,6 +9,25 @@ namespace ConsoleApp1
         public String marka;
         int year;
         int price;
+        public int Year
+        {
+            set
+            {
+                if (value < 1885 || value > DateTime.Now.Year)
+                {
+                    Console.WriteLine("Год должен быть не меньше 1885 и не больше текущего!");
+                    year = 0;
+                }
+                else
+                {
+                    year = value;
+                }
+            }
+            get
+            {
+                return year; 
+            }
+        }
         public void init()
         {
             marka = "";
