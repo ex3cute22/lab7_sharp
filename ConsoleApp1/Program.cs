@@ -31,7 +31,19 @@ namespace ConsoleApp1
             {
                 cars[i].display();
             }
+            String ClaSS = "A";
+            cars[2].ClassCar(ClaSS);
+            Console.WriteLine(ClaSS);
 
+            String CLASS = "A";
+            cars[3].ClassCarRef(ref CLASS);
+            Console.WriteLine(CLASS);
+
+            String CLASSOUT;
+            cars[4].ClassCarOut(out CLASSOUT);
+            Console.WriteLine(CLASSOUT);
+
+            cars[4].addTag();
             /* cars[0] = cars[1];
              Car toyota = new Car();
              toyota.init("toyota", 2000, 100000);

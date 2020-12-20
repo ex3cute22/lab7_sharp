@@ -25,7 +25,7 @@ namespace ConsoleApp1
             }
             get
             {
-                return year; 
+                return year;
             }
         }
         public void init()
@@ -52,6 +52,36 @@ namespace ConsoleApp1
             year = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Цена: ");
             price = Convert.ToInt32(Console.ReadLine());
+        }
+
+        public void ClassCar(String classAuto)
+        {
+            classAuto = "B";
+            Console.WriteLine(classAuto);
+        }
+
+        public void ClassCarRef(ref String classAuto)
+        {
+            classAuto = "B";
+            Console.WriteLine(classAuto);
+        }
+
+        public void ClassCarOut(out String classAuto)
+        {
+            classAuto = "B";
+            Console.WriteLine(classAuto);
+        }
+        public void addTag()
+        {
+            marka += " (purchased)";
+        }
+        public static Car operator +(Car a, Car b)
+        {
+            return new Car {marka = a.marka + "-" + b.marka, year = (a.year + b.year)/2, price = a.price + b.price };
+        }
+        public static Car operator ++(Car a)
+        {
+            return new Car { marka = a.marka, year = a.year + 1, price = a.price + 100000 };
         }
     }
 }
