@@ -8,15 +8,18 @@ namespace ConsoleApp1
     {
         Car slot = new Car();
         String classCar;
+        private static int count = 0    ;
         public void init()
         {
             slot.init();
             classCar = " ";
+            count++;
         }
         public void init(Car _slot, String _classCar)
         {
             slot = _slot;
             classCar = _classCar;
+            count++;
         }
         public void display()
         {
@@ -29,5 +32,14 @@ namespace ConsoleApp1
             classCar = Console.ReadLine();
             slot.read();
         }
+        public static void RemoveItem()
+        {
+            count--;
+        }
+        public static int InfoCount()
+        {
+            return count;
+        }
+
     }
 }

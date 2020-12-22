@@ -44,6 +44,26 @@ namespace ConsoleApp1
         {
             Console.WriteLine($"Марка : {marka}  Год: {year}г.  Цена: {price}");
         }
+        public void Add(Car obj)
+        {
+            int sum = price + obj.price;
+            if (sum > 350000)
+            {
+                marka = "Ferrari"; year = 2018; price = 350000;
+            }
+            else if (sum > 250000)
+            {
+                marka = "Nissan"; year = 2004; price = 250000;
+            }
+            else if (sum > 150000)
+            {
+                marka = "ВАЗ"; year = 1988; price = 150000;
+            }
+            else
+            {
+                marka = "ЗАЗ"; year = 1966; price = 0;
+            }
+        }
         public void read()
         {
             Console.WriteLine("Марка: ");
@@ -53,7 +73,6 @@ namespace ConsoleApp1
             Console.WriteLine("Цена: ");
             price = Convert.ToInt32(Console.ReadLine());
         }
-
         public void ClassCar(String classAuto)
         {
             classAuto = "B";
@@ -75,13 +94,15 @@ namespace ConsoleApp1
         {
             marka += " (purchased)";
         }
-        public static Car operator +(Car a, Car b)
-        {
-            return new Car {marka = a.marka + "-" + b.marka, year = (a.year + b.year)/2, price = a.price + b.price };
-        }
         public static Car operator ++(Car a)
         {
             return new Car { marka = a.marka, year = a.year + 1, price = a.price + 100000 };
+        }
+        public static Car operator +(Car a, Car b)
+        {
+            Car c = a;
+            c.Add(b);
+            return c; 
         }
     }
 }

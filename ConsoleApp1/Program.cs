@@ -6,7 +6,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Car[] cars = new Car[5];
+            /*Car[] cars = new Car[5];
             for (int i = 0; i < cars.Length; i++)
             {
                 cars[i] = new Car();
@@ -43,7 +43,26 @@ namespace ConsoleApp1
             cars[4].ClassCarOut(out CLASSOUT);
             Console.WriteLine(CLASSOUT);
 
-            cars[4].addTag();
+            cars[4].addTag();*/
+
+          /*  Car toyota = new Car();
+            toyota.init("toyota", 1998, 100000);
+            Car bmw = new Car();
+            bmw.init("bmw", 2020, 300000);
+
+            Car ferrari = toyota + bmw;
+            ferrari.display();*/
+
+            Shop[] shop = new Shop[5];
+            for (int i = 0; i < 5; i++)
+            {
+                shop[i] = new Shop();
+                shop[i].init();
+            }
+            Console.WriteLine(Shop.InfoCount());
+            Shop.RemoveItem();
+            Console.WriteLine(Shop.InfoCount());
+
             /* cars[0] = cars[1];
              Car toyota = new Car();
              toyota.init("toyota", 2000, 100000);
