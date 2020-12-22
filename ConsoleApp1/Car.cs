@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsoleApp1
 {
-    struct Car
+    class Car
     {
         public String marka;
         int year;

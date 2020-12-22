@@ -8,7 +8,7 @@ namespace ConsoleApp1
     {
         Car slot = new Car();
         String classCar;
-        private static int count = 0    ;
+        private static int count = 0;
         public void init()
         {
             slot.init();
